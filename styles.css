@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tarjeta */
+.card {
+    padding: 45px;
+    animation: fadeIn 1.2s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Título */
+.title {
+    font-family: 'Playfair Display', serif;
+    color: #800020;
+    font-size: 44px;
+    margin-bottom: 35px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Botones */
+.buttons {
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+    font-family: 'Poppins', sans-serif;
+}
+
+#yes {
+    background-color: #800020;
+    color: white;
+    box-shadow: 0 6px 15px rgba(128, 0, 32, 0.35);
+}
+
+#no {
+    background-color: #d8cfc4;
+    color: #4a3f35;
+}
+
+/* Mensajes del NO */
+#message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #6b7a78;
+    min-height: 32px;
+    font-family: 'Comic Neue', cursive;
+    animation: pop 0.3s ease;
+}
+
+/* Imagen */
+.photo {
+    margin-top: 30px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 18px;
+    animation: fadeUp 1.5s ease;
+}
+
+/* Confetti canvas */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
